@@ -1,3 +1,7 @@
+---
+layout: page
+title: Schnelker Arch Documentation
+---
     Eric Schnelker
     Codi West
     System Administration
