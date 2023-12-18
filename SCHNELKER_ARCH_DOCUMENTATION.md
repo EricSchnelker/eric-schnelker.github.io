@@ -2,6 +2,7 @@
     Codi West  
     System Administration  
     12/8/2023  
+    
 ## <ins><p style="text-align: center;">Arch Linux -- Install Documentation</ins></p>  
 1. #### Acquired Arch Linux .iso from mirror link provided by the Arch Linux wiki  
    * ###### Used MIT mirror  
