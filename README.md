@@ -1,1 +1,1 @@
-[Arch Documentation][SCHNELKER_ARCH_DOCUMENTATION.md]
+[Arch Documentation](SCHNELKER_ARCH_DOCUMENTATION.md)
