@@ -7,3 +7,5 @@ relative_links:
   collections: true
 include:
   - SCHNELKER_ARCH_DOCUMENTATION.md
+  - SCHNELKER_DOCKER_DOCUMENTATION.md
+permalink: /SCHNELKER_ARCH_DOCUMENTATION.md
