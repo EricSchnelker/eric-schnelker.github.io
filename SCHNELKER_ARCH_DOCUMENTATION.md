@@ -1,7 +1,7 @@
----
 layout: page
 title: Schnelker Arch Documentation
----
+permalink: /URL-PATH
+
     Eric Schnelker
     Codi West
     System Administration
