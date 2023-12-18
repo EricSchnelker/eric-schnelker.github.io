@@ -15,7 +15,7 @@
    * ###### Virtual ethernet connection from vm to host, host using TUwireless wifi
 -----------------------
 5. #### Pinged the Arch Linux Website
-   * ###### Ping was endless, I had to Ctrl + C out of it.
+   * ###### Ping was endless, I had to Ctrl plus C out of it.
 -----------------------
 6. #### Set Time/Date
    * ###### Used timedatectl to find local time zone and change current time zone to correct local zone
@@ -37,7 +37,7 @@
 -----------------------
 14. #### Set root password
 -----------------------
-15. #### Installed grub and used it on /sda1 (EFI partition)
+15. #### Installed grub and used it on sda1 (EFI partition)
 -----------------------
 16. #### Installed GNOME
 -----------------------
@@ -57,7 +57,7 @@
 -----------------------
 23. #### Changed sudoers file to give wheel group permission to sudo.
 -----------------------
-24. #### Created user codi and set password to “GraceHopper1906” and set it to force a password change at next login
+24. #### Created user codi and set password to GraceHopper1906 and set it to force a password change at next login
     * ###### Added codi to wheel group, giving sudo permissions
 -----------------------
 25. #### Installed zsh
