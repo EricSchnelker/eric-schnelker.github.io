@@ -6,4 +6,4 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - SCHNELKERARCHDOCUMENTATION.md
+  - SCHNELKER_ARCH_DOCUMENTATION.md
