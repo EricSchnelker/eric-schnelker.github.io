@@ -9,3 +9,4 @@ relative_links:
 include:
   - SCHNELKER_ARCH_DOCUMENTATION.md
   - SCHNELKER_DOCKER_DOCUMENTATION.md
+markdown: GFM
