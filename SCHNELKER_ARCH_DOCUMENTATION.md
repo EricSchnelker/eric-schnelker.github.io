@@ -1,15 +1,15 @@
 layout: page
 title: Schnelker Arch Documentation
-permalink: /URL-PATH
+permalink: /ARCH
 
-    Eric Schnelker
-    Codi West
-    System Administration
-    12/8/2023
-## <ins><p style="text-align: center;">Arch Linux -- Install Documentation</ins></p>
-1. #### Acquired Arch Linux .iso from mirror link provided by the Arch Linux wiki
-   * ###### Used MIT mirror
------------------------
+    Eric Schnelker  
+    Codi West  
+    System Administration  
+    12/8/2023  
+## <ins><p style="text-align: center;">Arch Linux -- Install Documentation</ins></p>  
+1. #### Acquired Arch Linux .iso from mirror link provided by the Arch Linux wiki  
+   * ###### Used MIT mirror  
+-----------------------  
 2. #### Set-up Arch VM in VMware Workstation Pro using the VM setup wizard and the .iso
    * ###### Configured memory and partition size while doing so
 -----------------------
