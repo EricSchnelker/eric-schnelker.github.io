@@ -1,3 +1,6 @@
+layout: page
+title: "Schnelker Arch Installation"
+permalink: /Arch
     Eric Schnelker
     Codi West
     System Administration
