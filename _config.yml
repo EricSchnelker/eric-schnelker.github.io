@@ -2,6 +2,7 @@ theme: jekyll-theme-minimal
 title: Eric Schnelker Home Page
 plugins:
   - jekyll-relative-links
+  - jekyll-optional-front-matter
 relative_links:
   enabled: true
   collections: true
