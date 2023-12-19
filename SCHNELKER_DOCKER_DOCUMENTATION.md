@@ -18,7 +18,7 @@
 ------------------------------------------
 5. #### Created a wordpress directory using mkdir
     * ###### cd into that directory
-```
+``` bash
       $ cd my_wordpress/
 ```
 ------------------------------------------
@@ -60,7 +60,10 @@ volumes:
   wp_data:
 ```
 ------------------------------------------
-7. #### Used docker compose up -d, which pulls the needed Docker images, and starts the wordpress and database containers.
+7. #### Pulled the needed Docker images, and starts the wordpress and database containers.
+``` bash
+    $ docker compose up -d
+```
 ------------------------------------------
 8. #### Pulled up localhost:80 in FireFox, which brought up the WordPress startup wizard.
 ------------------------------------------
