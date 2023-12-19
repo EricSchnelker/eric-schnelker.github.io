@@ -21,7 +21,7 @@
 ------------------------------------------
 6. #### Created docker-compose.yml file
     * ###### Followed the documentation and pasted the sample content for the .yml file
-''' yaml
+``` yaml
 services:
   db:
     # We use a mariadb image which supports both amd64 & arm64 architecture
@@ -55,7 +55,7 @@ services:
 volumes:
   db_data:
   wp_data:
-'''
+```
 ------------------------------------------
 7. #### Used docker compose up -d, which pulls the needed Docker images, and starts the wordpress and database containers.
 ------------------------------------------
