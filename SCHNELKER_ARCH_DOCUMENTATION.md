@@ -4,23 +4,28 @@
     12/8/2023
 ## <ins><p style="text-align: center;">Arch Linux -- Install Documentation</ins></p>
 1. #### Acquired Arch Linux .iso from mirror link provided by the Arch Linux wiki
-   * ###### Used MIT mirror
+   * ###### Used MIT mirror to download
 -----------------------
 2. #### Set-up Arch VM in VMware Workstation Pro using the VM setup wizard and the .iso
    * ###### Configured memory and partition size while doing so
 -----------------------
-3. #### Verified the boot mode (returned 64, indicating UEFI mode and 64 bit UEFI)
------------------------
-4. #### Connected to wifi
+3. #### Connected to wifi
    * ###### Virtual ethernet connection from vm to host, host using TUwireless wifi
 -----------------------
-5. #### Pinged the Arch Linux Website
-   * ###### Ping was endless, I had to Ctrl plus C out of it.
+4. #### Pinged the Arch Linux Website
+``` bash
+      $ ping -c 3 archlinux.org
+```
 -----------------------
-6. #### Set Time/Date
-   * ###### Used timedatectl to find local time zone and change current time zone to correct local zone
------------------------
-7. #### Formatted a partition for EFI, a partition for FAT32 (Swap partition) and the linux filesystem (EXT4)
+5. #### Formatted a partition for EFI, a partition for FAT32 (Swap partition) and the linux filesystem (EXT4)
+   * ###### List Disks
+         ``` bash
+              $ fdisk -l
+         ```
+   * ###### Create disk layout partition table
+         ``` bash
+              $ cfdisk /dev/sda
+         ```
 -----------------------
 8. #### Installed base packages using pacstrap
    * ###### Also installed nano
