@@ -144,12 +144,27 @@
          systemctl enable NetworkManager
     ```
 -----------------------
-21. #### Installed vim
+19. #### Created user EricSchnelker, set password, and added user to wheel group
+  * ###### Create user and add to wheel group
+    ``` bash
+         useradd -m -G wheel EricSchnelker
+    ```
+  * ###### Set passwd for new user
+    ``` bash
+         passwd EricSchnelker
+    ```
 -----------------------
-22. #### Created user EricSchnelker and set password
-    * ###### Added user to wheel group
------------------------
-23. #### Changed sudoers file to give wheel group permission to sudo.
+20. #### Changed sudoers file to give wheel group permission to sudo.
+  * ###### Open the visudo file using nano
+     ``` bash
+         EDITOR=nano visudo
+    ```
+  * ###### Find the following line
+    ``` bash
+         # %wheel ALL=(ALL) ALL
+    ```
+  * ###### Uncomment it by removing the # sign
+     
 -----------------------
 24. #### Created user codi and set password to GraceHopper1906 and set it to force a password change at next login
     * ###### Added codi to wheel group, giving sudo permissions
