@@ -64,4 +64,4 @@ volumes:
 9. #### Completed WordPress startup wizard
 ------------------------------------------
 10. ## Final Product:
-    ![Screenshot](http://screenshot.png?raw=true "screenshot")
+    ![Screenshot](screenshot.png?raw=true "screenshot")
