@@ -63,3 +63,5 @@ volumes:
 ------------------------------------------
 9. #### Completed WordPress startup wizard
 ------------------------------------------
+10. ## Final Product:
+    ![Screenshot](Screenshot_of_docker_workpress.png)
