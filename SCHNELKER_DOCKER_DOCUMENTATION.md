@@ -18,6 +18,9 @@
 ------------------------------------------
 5. #### Created a wordpress directory using mkdir
     * ###### cd into that directory
+```
+      $ cd my_wordpress/
+```
 ------------------------------------------
 6. #### Created docker-compose.yml file
     * ###### Followed the documentation and pasted the sample content for the .yml file
