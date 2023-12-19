@@ -23,22 +23,22 @@
          $ fdisk -l
      ```
    * ###### Create disk layout partition table
-         ``` bash
-              $ cfdisk /dev/sda
-         ```
+     ``` bash
+         $ cfdisk /dev/sda
+     ```
    * ###### Create FAT32 file system
-         ``` bash
-              $ mkfs.fat -F32 /dev/sda1
-         ```
+     ``` bash
+         $ mkfs.fat -F32 /dev/sda1
+     ```
    * ###### Prepare the swap partition:
-         ``` bash
-              $ mkswap /dev/sda2
-              $ swapon /dev/sda2
-         ```
+     ``` bash
+         $ mkswap /dev/sda2
+         $ swapon /dev/sda2
+     ```
    * ###### Created EXT4 file system for root partition
-         ``` bash
-              $ mkfs.ext4 /dev/sda3
-         ```
+     ``` bash
+         $ mkfs.ext4 /dev/sda3
+     ```
 -----------------------
 6. #### Sync pacman repository, then mount root partition to /mnt directory nstalled base packages before installing base packages
   * ###### Sync pacman repository
