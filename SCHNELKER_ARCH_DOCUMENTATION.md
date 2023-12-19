@@ -184,50 +184,53 @@
 -----------------------
 23. #### Installed zsh
     ``` bash
-         sudo pacman -S zsh
+        $ sudo pacman -S zsh
     ```
 -----------------------
 24. #### Installed OpenSSH, started it, and enabled it to run at startup
   * ###### Installed OpenSSH
     ``` bash
-         sudo pacman -S openssh
+        $ sudo pacman -S openssh
     ```
   * ###### Started service and enabled it to start at runtime
     ``` bash
-        sudo systemctl start sshd
-        sudo systemctl enable sshd
+        $ sudo systemctl start sshd
+        $ sudo systemctl enable sshd
     ```
 -----------------------
-27. #### Installed yay-git AUR
+25. #### Installed yay-git AUR
+ * ###### Install git
     ``` bash
-        sudo systemctl start sshd
+        $ sudo pacman -S git
     ```
+ * ###### Clone yay
     ``` bash
-        sudo systemctl start sshd
+        $ sudo git clone https://aur.archlinux.org/yay-git.git
     ```
+ * ###### cd into yay-git directory
     ``` bash
-        sudo systemctl start sshd
+        $ cd yay-git
     ```
+ * ###### Install base-devel packages
     ``` bash
-        sudo systemctl start sshd
+        $ sudo pacman -S --needed base-devel
     ```
+ * ###### Build the package
     ``` bash
-        sudo systemctl start sshd
+        $ makepkg -si
     ```
-    sudo pacman -S git
-    sudo git clone https://aur.archlinux.org/yay-git.git
-    cd yay-git
-    $ sudo pacman -S --needed base-devel
-    $ makepkg -si
 -----------------------
-28. #### Installed chrome using yay
+26. #### Installed chrome using yay
+    ``` bash
+        $ Yay -S google-chrome
+    ```
 -----------------------
-29. #### Modified .bashrc using nano to add colors to the terminal
+27. #### Modified .bashrc using nano to add colors to the terminal
 -----------------------
-30. #### Added .bash_aliases and a script into .bashrc to read aliases from .bash_aliases
+28. #### Added .bash_aliases and a script into .bashrc to read aliases from .bash_aliases
     * ###### Added alias for exit (e)
     * ###### Added alias for clear (c)
     * ###### Added alias for ls -a (l)
     * ###### Added alias to allow for copy to have a progress bar (cpv)
 -----------------------
-31. #### Already installed a bootloader, would rather have it boot into that in case of any future issues with GNOME than directly booting into GNOME.
+29. #### Already installed a bootloader, would rather have it boot into that in case of any future issues with GNOME than directly booting into GNOME.
