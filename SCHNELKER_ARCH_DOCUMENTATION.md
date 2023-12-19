@@ -26,15 +26,45 @@
          ``` bash
               $ cfdisk /dev/sda
          ```
+   * ###### Create FAT32 file system
+         ``` bash
+              $ mkfs.fat -F32 /dev/sda1
+         ```
+   * ###### Prepare the swap partition:
+         ``` bash
+              $ mkswap /dev/sda2
+              $ swapon /dev/sda2
+         ```
+   * ###### Created EXT4 file system for root partition
+         ``` bash
+              $ mkfs.ext4 /dev/sda3
+         ```
 -----------------------
-8. #### Installed base packages using pacstrap
-   * ###### Also installed nano
+6. #### Sync pacman repository, then mount root partition to /mnt directory nstalled base packages before installing base packages
+  * ###### Sync pacman repository
+         ``` bash
+              $ pacman -Syy
+         ```
+  * Mount root partition to /mnt directory
+         ``` bashpacstrap -K /mnt base linux linux-firmware sudo nano
+              $ mount /dev/sda3 /mnt
+         ```
+  * Install all necessary packages and nano
+         ``` bash
+              $ pacstrap -K /mnt base linux linux-firmware sudo nano
+         ```
 -----------------------
-9. #### Generated fstab
+7. #### Generated /etc/fstab file
+     ``` bash
+          $ genfstab -U /mnt >> /mnt/etc/fstab
+     ```
 -----------------------
-10. #### Chrooted into the install
+8. #### Chrooted into the install
+    ``` bash
+          $ arch-chroot /mnt
+    ```
 -----------------------
-11. #### Used nano to modify locale-gen file and uncomment necessary locales, then ran locale-gen
+9. #### Used nano to modify locale-gen file and uncomment necessary locales, then ran locale-gen
 -----------------------
 12. #### Created and set the lang variable using echo and export
 -----------------------
