@@ -14,54 +14,59 @@
 -----------------------
 4. #### Pinged the Arch Linux Website
 ``` bash
-      $ ping -c 3 archlinux.org
+      ping -c 3 archlinux.org
 ```
 -----------------------
 5. #### Formatted a partition for EFI, a partition for FAT32 (Swap partition) and the linux filesystem (EXT4)
    * ###### List Disks
      ``` bash
-         $ fdisk -l
+         fdisk -l
      ```
    * ###### Create disk layout partition table
      ``` bash
-         $ cfdisk /dev/sda
+         cfdisk /dev/sda
      ```
    * ###### Create FAT32 file system
      ``` bash
-         $ mkfs.fat -F32 /dev/sda1
+         mkfs.fat -F32 /dev/sda1
      ```
    * ###### Prepare the swap partition:
      ``` bash
-         $ mkswap /dev/sda2
-         $ swapon /dev/sda2
+         mkswap /dev/sda2
+         swapon /dev/sda2
      ```
    * ###### Created EXT4 file system for root partition
      ``` bash
-         $ mkfs.ext4 /dev/sda3
+         mkfs.ext4 /dev/sda3
      ```
 -----------------------
 6. #### Sync pacman repository, then mount root partition to /mnt directory nstalled base packages before installing base packages
   * ###### Sync pacman repository
-         ``` bash
-              $ pacman -Syy
-         ```
+     ``` bash
+         pacman -Syy
+     ```
   * Mount root partition to /mnt directory
-         ``` bashpacstrap -K /mnt base linux linux-firmware sudo nano
-              $ mount /dev/sda3 /mnt
-         ```
+     ``` bash
+         mount /dev/sda3 /mnt
+     ```
   * Install all necessary packages and nano
-         ``` bash
-              $ pacstrap -K /mnt base linux linux-firmware sudo nano
-         ```
+     ``` bash
+         pacstrap -K /mnt base linux linux-firmware sudo nano
+     ```
 -----------------------
 7. #### Generated /etc/fstab file
      ``` bash
-          $ genfstab -U /mnt >> /mnt/etc/fstab
+         genfstab -U /mnt >> /mnt/etc/fstab
      ```
 -----------------------
 8. #### Chrooted into the install
+     ``` bash
+         arch-chroot /mnt
+     ```
+-----------------------
+9. #### Set the timezone
     ``` bash
-          $ arch-chroot /mnt
+         ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
     ```
 -----------------------
 9. #### Used nano to modify locale-gen file and uncomment necessary locales, then ran locale-gen
