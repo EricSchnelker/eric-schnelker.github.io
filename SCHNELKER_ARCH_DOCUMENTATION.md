@@ -90,7 +90,15 @@
         export LANG=en_US.UTF-8
     ```
 -----------------------
-13. #### Set host name
+13. #### Set hostname and add to /etc/hosts file using nano
+  * ###### Set hostname
+    ``` bash
+         echo arch-pc > /etc/hostname
+    ```
+  * ###### Add hostname to /etc/hosts file
+    ``` bash
+         nano /etc/hosts
+    ```
 -----------------------
 14. #### Set root password
 -----------------------
