@@ -101,19 +101,48 @@
     ```
 -----------------------
 14. #### Set root password
+    ``` bash
+         passwd
+    ```
 -----------------------
-15. #### Installed grub and used it on sda1 (EFI partition)
+15. #### Installed GRUB bootloader, EFI Boot Manager and used it on sda1 (EFI partition)
+  * ###### Installed GRUB bootloader package as well as EFI Boot Manager package
+    ``` bash
+         pacman -S grub efibootmgr os-prober mtools
+    ```
+  * ###### Create mount point for /dev/sda1 and mount it
+    ``` bash
+         mkdir /boot/efi
+         mount /dev/sda1 /boot/efi
+    ```
+  * ###### Install bootloader
+    ``` bash
+         grub-install --target=x86_64-efi --bootloader-id=grub_uefi
+    ```
+  * ###### Finally, generate the “/boot/grub/grub.cfg” file.
+    ``` bash
+         grub-mkconfig -o /boot/grub/grub.cfg
+    ```
 -----------------------
-16. #### Installed GNOME
+16. #### Installed Xorg packages
+    ``` bash
+         pacman -S xorg-server xorg-apps
+    ```
 -----------------------
-17. #### Installed Xorg packages
+17. #### Installed Nvidia packages
+    ``` bash
+         pacman -S nvidia nvidia-utils
+    ```
 -----------------------
-18. #### Installed Nvidia packages
-    * ###### Drivers
------------------------
-19. #### Installed GNOME and enabled GDM
------------------------
-20. #### Installed Network Manager and enabled the service
+18. #### Installed GNOME and enabled GDM as well as Network Manager
+  * ###### Install GNOME
+    ``` bash
+         systemctl enable gdm
+    ```
+  * ###### Enable GDM, then enable NetworkManager
+    ``` bash
+         systemctl enable NetworkManager
+    ```
 -----------------------
 21. #### Installed vim
 -----------------------
