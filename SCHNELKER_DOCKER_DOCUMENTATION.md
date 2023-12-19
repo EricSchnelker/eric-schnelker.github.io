@@ -63,9 +63,9 @@ volumes:
 ------------------------------------------
 9. #### Completed WordPress startup wizard
 ------------------------------------------
-10. ## Admin console screenshot:
+10. #### Admin console screenshot:
     ![admin screenshot](admin_screenshot.png?raw=true "admin screenshot")
 ------------------------------------------
-11. ## Final Product:
+11. #### Final Product:
     ![Home Screenshot](homepage_screenshot.png?raw=true "home screenshot")
 
