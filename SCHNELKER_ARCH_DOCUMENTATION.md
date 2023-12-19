@@ -144,19 +144,19 @@
          systemctl enable NetworkManager
     ```
 -----------------------
-19. #### Created user EricSchnelker, set password, and added user to wheel group
+19. #### Created user ericschnelker, set password, and added user to wheel group
   * ###### Create user and add to wheel group
     ``` bash
-         useradd -m -G wheel EricSchnelker
+         useradd -m -G wheel ericschnelker
     ```
   * ###### Set passwd for new user
     ``` bash
-         passwd EricSchnelker
+         passwd ericschnelker
     ```
 -----------------------
 20. #### Changed sudoers file to give wheel group permission to sudo.
   * ###### Open the visudo file using nano
-     ``` bash
+    ``` bash
          EDITOR=nano visudo
     ```
   * ###### Find the following line
@@ -164,15 +164,39 @@
          # %wheel ALL=(ALL) ALL
     ```
   * ###### Uncomment it by removing the # sign
-     
 -----------------------
-24. #### Created user codi and set password to GraceHopper1906 and set it to force a password change at next login
-    * ###### Added codi to wheel group, giving sudo permissions
+21. #### Created user codi and set password to GraceHopper1906 and set it to force a password change at next login
+    * ###### Create user codi and add to wheel group
+    ``` bash
+         useradd -m -G wheel codi
+    ```
+  * ###### Set passwd for new user to GraceHopper1906 and set it to be changed after next login
+    ``` bash
+         passwd codi --expire
+    ```
 -----------------------
-25. #### Installed zsh
+22. #### Exit the installer
+    ``` bash
+         exit
+         umount -R /mnt
+         reboot
+    ```
 -----------------------
-26. #### Installed openssh
-    * ###### Started service and enabled it to start at runtime
+23. #### Installed zsh
+    ``` bash
+         sudo pacman -S zsh
+    ```
+-----------------------
+24. #### Installed OpenSSH, started it, and enabled it to run at startup
+  * ###### Installed OpenSSH
+    ``` bash
+         sudo pacman -S openssh
+    ```
+  * ###### Started service and enabled it to start at runtime
+    ``` bash
+        sudo systemctl start sshd
+        sudo systemctl enable sshd
+    ```
 -----------------------
 27. #### Installed yay-git AUR
 -----------------------
