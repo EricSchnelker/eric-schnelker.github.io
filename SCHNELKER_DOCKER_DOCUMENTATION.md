@@ -16,15 +16,15 @@
     * ##### Using guide: https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
     * ###### Had to manually install docker compose as docker-compose-plugin was not found
     * ###### Docker:
-``` bash
-    $ sudo apt install docker.io
-```
-  * ###### Docker Compose:
-``` bash
-    $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-    $ sudo chmod +x /usr/local/bin/docker-compose
-    $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-```
+    ``` bash
+         $ sudo apt install docker.io
+    ```
+    * ###### Docker Compose:
+    ``` bash
+         $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+         $ sudo chmod +x /usr/local/bin/docker-compose
+         $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    ```
 ------------------------------------------
 4. #### Checked docker version and made sure it is up-to-date
 ``` bash
