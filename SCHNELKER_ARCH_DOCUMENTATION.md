@@ -69,9 +69,26 @@
          ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
     ```
 -----------------------
-9. #### Used nano to modify locale-gen file and uncomment necessary locales, then ran locale-gen
+10. #### Used nano to modify locale-gen file and uncomment necessary locales, then ran locale-gen
+  * ###### Create and modify locale-gen file using nano
+    ``` bash
+         nano /etc/locale.gen
+    ```
+  * ###### Run locale-gen
+    ``` bash
+         locale-gen
+    ```
+-----------------------
+11. #### Synchronize the hardware clock
+    ``` bash
+         hwclock --systohc
+    ```
 -----------------------
 12. #### Created and set the lang variable using echo and export
+    ``` bash
+        echo LANG=en_US.UTF-8 > /etc/locale.conf
+        export LANG=en_US.UTF-8
+    ```
 -----------------------
 13. #### Set host name
 -----------------------
