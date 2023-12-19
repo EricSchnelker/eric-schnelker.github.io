@@ -19,9 +19,9 @@
 -----------------------
 5. #### Formatted a partition for EFI, a partition for FAT32 (Swap partition) and the linux filesystem (EXT4)
    * ###### List Disks
-         ``` bash
-              $ fdisk -l
-         ```
+     ``` bash
+         $ fdisk -l
+     ```
    * ###### Create disk layout partition table
          ``` bash
               $ cfdisk /dev/sda
