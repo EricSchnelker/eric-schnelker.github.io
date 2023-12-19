@@ -199,6 +199,26 @@
     ```
 -----------------------
 27. #### Installed yay-git AUR
+    ``` bash
+        sudo systemctl start sshd
+    ```
+    ``` bash
+        sudo systemctl start sshd
+    ```
+    ``` bash
+        sudo systemctl start sshd
+    ```
+    ``` bash
+        sudo systemctl start sshd
+    ```
+    ``` bash
+        sudo systemctl start sshd
+    ```
+    sudo pacman -S git
+    sudo git clone https://aur.archlinux.org/yay-git.git
+    cd yay-git
+    $ sudo pacman -S --needed base-devel
+    $ makepkg -si
 -----------------------
 28. #### Installed chrome using yay
 -----------------------
