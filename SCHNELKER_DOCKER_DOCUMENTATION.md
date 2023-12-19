@@ -6,15 +6,30 @@
 1. #### Installed Ubuntu on VMWare Workstation
     * ###### Used Ubuntu’s website and downloaded latest stable .iso
 ------------------------------------------
-2. #### Updated Ubuntu software and packages to latest versions
+2. #### Updated and upgraded Ubuntu software and packages to latest versions
+``` bash
+      $ sudo apt update
+      $ sudo apt upgrade
+```
 ------------------------------------------
-3. #### Installed Docker through terminal
-    * ###### Installed docker-compose package as well
-    * ###### Note: docker-compose-plugin does not exist in Ubuntu's latest LTS, it's just docker-compose
+3. #### Installed Docker through terminal and Docker Compose
     * ##### Using guide: https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
+    * ###### Had to manually install docker compose as docker-compose-plugin was not found
+    * ###### Docker:
+``` bash
+      sudo apt install docker.io
+```
+    * ###### Docker Compose:
+``` bash
+    $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    $ sudo chmod +x /usr/local/bin/docker-compose
+    $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
 ------------------------------------------
 4. #### Checked docker version and made sure it is up-to-date
-    * ###### Checked version of docker-compose as well
+``` bash
+      $ docker version
+```
 ------------------------------------------
 5. #### Created a wordpress directory using mkdir
     * ###### cd into that directory
@@ -23,7 +38,9 @@
 ```
 ------------------------------------------
 6. #### Created docker-compose.yml file
-    * ###### Followed the documentation and pasted the sample content for the .yml file
+``` bash
+      $ sudo nano docker-compose.yml
+```
 ``` yaml
 services:
   db:
